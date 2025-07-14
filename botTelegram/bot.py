@@ -138,4 +138,5 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("suggest", suggest_command))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
     logger.info("✅ Bot en ligne… Attente des messages")
-    app.run_polling()
+    # Drop any pending updates to avoid conflicts with other running instances
+    app.run_polling(drop_pending_updates=True)
