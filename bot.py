@@ -54,7 +54,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "❓ *Comment faire mon équivalence ?*\n"
         "❓ *Quels sont les frais de visa ?*\n"
         "❓ *Puis-je avoir un garant hors de ma famille ?*\n\n"
-        "Et si tu veux voir la procédure complète, tape /guide.\nTape /words pour voir la liste des mots-clés que je comprends et /help pour voir toutes les options 😉"
+        "Et si tu veux voir la procédure complète, tape /guide.\nTape /words pour voir la liste des mots-clés que je comprends et /help pour voir toutes les options😉"
     )
     logger.info("Utilisateur a appelé /start")
 
