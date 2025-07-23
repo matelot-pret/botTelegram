@@ -49,12 +49,19 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not message:
         return
     await message.reply_text(
-        "🎓 Salut et bienvenue ! Je suis ton assistant pour t’aider à réussir ta procédure d’études en Belgique 🇧🇪.\n\n"
-        "Tu peux simplement me poser des questions comme :\n"
-        "❓ *Comment faire mon équivalence ?*\n"
-        "❓ *Quels sont les frais de visa ?*\n"
-        "❓ *Puis-je avoir un garant hors de ma famille ?*\n\n"
-        "Et si tu veux voir la procédure complète, tape /guide.\nTape /words pour voir la liste des mots-clés que je comprends et /help pour voir toutes les options 😉"
+        "🎓 Bienvenue !\n\n"
+        "Ce bot est un guide spécialisé uniquement pour la procédure d’obtention du visa étudiant pour la Belgique, destiné principalement aux Camerounais.\n\n"
+        "📌 Il fonctionne par mot-clé. Voici les principaux mots-clés qu’il reconnaît :\n"
+        "/conditions, /equivalence, /inscription, /visa, /documents, /delais, /frais, /hebergement, /contact\n\n"
+        "👉 Tu peux utiliser la commande /word à tout moment pour revoir cette liste.\n\n"
+        "💡 Chaque mot-clé te renvoie :\n\n"
+        "    un résumé clair,\n\n"
+        "    les liens officiels (sites du gouvernement belge, des Hautes Écoles, etc.),\n\n"
+        "    et parfois un PDF ou formulaire directement utile.\n\n"
+        "⚠️ Ce n’est pas une intelligence artificielle. Il ne peut pas répondre à des questions ouvertes ni t’expliquer les démarches.\n"
+        "Il est conçu pour te donner la bonne information depuis la bonne source, avec les liens pour vérifier toi-même ou aller plus loin.\n\n"
+        "✉️ Pour toute suggestion, remarque ou amélioration, utilise la commande /suggest.\n\n"
+        "Bonne chance dans tes démarches, et que la force soit avec toi �✨"
     )
     logger.info("Utilisateur a appelé /start")
 
