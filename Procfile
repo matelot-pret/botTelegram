@@ -1,1 +1,1 @@
-web: cd botTelegram && python bot.py
+worker: cd botTelegram && python bot.py
