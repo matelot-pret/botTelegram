@@ -16,21 +16,33 @@ if not TOKEN:
 
 # Réponses personnalisées avec les vrais liens
 reponses = {
+    "conditions": "📋 Conditions générales pour étudier en Belgique :\n• Avoir un diplôme équivalent au CESS belge\n• Justifier de ressources financières suffisantes\n• Ne pas avoir dépassé l'âge limite (selon le niveau d'études)\n• Maîtriser la langue d'enseignement\n\nPlus d'infos : https://www.belgium.be/fr/enseignement/enseignement_superieur/etudier_en_belgique",
     "equivalence": "🟢 Pour faire ton equivalence du bac, commence par ici (Etape 1) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a74099308043aed3df637f7c3a9c",
-    "admission": "🏫 Pour demander une admission dans une ecole belge (Etape 2) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080eca4cbcd809f0f3580",
+    "inscription": "🏫 Pour demander une inscription dans une ecole belge (Etape 2) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080eca4cbcd809f0f3580",
+    "visa": "� Pour introduire ta demande de visa (Etape 5) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a192d5d49583b99bea",
+    "documents": "📑 Documents nécessaires :\n• Passeport valide\n• Diplômes traduits et légalisés\n• Attestation d'équivalence\n• Preuve d'inscription\n• Justificatifs financiers\n• Attestation médicale\n• Casier judiciaire\n\nListe complète : https://dofi.ibz.be/fr/themes/etudier-en-belgique",
+    "delais": "⏰ Délais importants :\n• Équivalence : avant le 15 juillet\n• Inscriptions universitaires : 30 avril (non-UE)\n• Demande de visa : 3 mois avant le départ\n• Campus Belgique : selon calendrier\n\nPlanification : https://www.studyinbelgium.be/fr/deadlines",
+    "frais": "💰 Frais à prévoir :\n• Équivalence : 200€\n• Inscription universitaire : 835€/an (non-UE)\n• Visa : 180€\n• Campus Belgique : gratuit\n• Assurance : ~400€/an\n\nDétails : https://www.studyinbelgium.be/fr/costs",
+    "hebergement": "� Options d'hébergement :\n• Résidences universitaires : 250-400€/mois\n• Kots privés : 300-600€/mois\n• Appartements : 400-800€/mois\n• Familles d'accueil : 450-650€/mois\n\nRecherche : https://www.kotplanet.be",
+    "contact": "📞 Contacts utiles :\n• Ambassade de Belgique au Cameroun : +237 222 79 35 00\n• Service équivalences : equivalences@cfwb.be\n• Campus Belgique : info.cameroun@campusbelgique.be\n• Urgences en Belgique : 112\n\nPlus d'infos : https://cameroun.diplomatie.belgium.be",
     "prise en charge": "💶 Pour comprendre l'annexe 32 et le garant (Etape 3) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a08d56d98c4133bc76",
     "campus belgique": "🎤 Pour l'entretien Campus Belgique (Etape 4) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a74099308055bc00d5f4449e8111",
-    "visa": "📄 Pour introduire ta demande de visa (Etape 5) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a192d5d49583b99bea",
     "conseils": "🧠 Conseils pratiques & erreurs a eviter :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a29936f876d9c9551b",
     "guide": "📘 Voici le guide complet de la procedure d'inscription :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080f0b036defbaa39057f"
 }
 
 questions = {
+    "conditions": ["condition", "conditions", "prerequis", "exigence", "critere", "eligibilite"],
     "equivalence": ["equivalence", "equivalance", "equivalant", "equivalent", "diplome reconnu", "equiv"],
-    "admission": ["admission", "sinscrire", "inscription", "dossier ecole", "ecole", "universite"],
+    "inscription": ["inscription", "admission", "sinscrire", "dossier ecole", "ecole", "universite"],
+    "visa": ["visa", "ambassade", "demande de visa", "tls contact", "frais visa"],
+    "documents": ["document", "documents", "papier", "papiers", "piece", "pieces", "dossier", "fichier"],
+    "delais": ["delai", "delais", "temps", "duree", "date limite", "echeance", "planning"],
+    "frais": ["frais", "cout", "prix", "tarif", "montant", "argent", "finance"],
+    "hebergement": ["hebergement", "logement", "chambre", "residence", "kot", "appartement"],
+    "contact": ["contact", "aide", "support", "telephone", "email", "adresse"],
     "prise en charge": ["prise en charge", "annexe 32", "garant", "qui peut me prendre en charge", "garantie financiere", "membre de la famille"],
     "campus belgique": ["campus belgique", "entretien", "campus", "questions entretien", "test"],
-    "visa": ["visa", "ambassade", "demande de visa", "tls contact", "frais visa"],
     "conseils": ["conseil", "erreur", "astuce", "important", "a eviter"],
     "guide": ["guide", "toutes les etapes", "procedure complete", "comment faire"]
 }  
