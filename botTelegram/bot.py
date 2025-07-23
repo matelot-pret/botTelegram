@@ -52,7 +52,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🎓 Bienvenue !\n\n"
         "Ce bot est un guide spécialisé uniquement pour la procédure d’obtention du visa étudiant pour la Belgique, destiné principalement aux Camerounais.\n\n"
         "📌 Il fonctionne par mot-clé. Voici les principaux mots-clés qu’il reconnaît :\n"
-        "/conditions, /equivalence, /inscription, /visa, /documents, /delais, /frais, /hebergement, /contact\n\n"
+        "conditions, equivalence, inscription, visa, documents, delais, frais, hebergement, contact\n\n"
         "👉 Tu peux utiliser la commande /word à tout moment pour revoir cette liste.\n\n"
         "💡 Chaque mot-clé te renvoie :\n\n"
         "    un résumé clair,\n\n"
