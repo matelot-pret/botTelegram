@@ -16,12 +16,11 @@ if not TOKEN:
 
 # Réponses personnalisées avec les vrais liens
 reponses = {
-
     "equivalence": "🟢 Pour faire ton equivalence du bac, commence par ici (Etape 1) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a74099308043aed3df637f7c3a9c",
     "inscription": "🏫 Pour demander une inscription dans une ecole belge (Etape 2) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080eca4cbcd809f0f3580",
-    "visa": "� Pour introduire ta demande de visa (Etape 5) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a192d5d49583b99bea",
-    "prise en charge": "💶 Pour comprendre l'annexe 32 et le garant (Etape 3) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a08d56d98c4133bc76",
+    "prise en charge": "� Pour comprendre l'annexe 32 et le garant (Etape 3) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a08d56d98c4133bc76",
     "campus belgique": "🎤 Pour l'entretien Campus Belgique (Etape 4) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a74099308055bc00d5f4449e8111",
+    "visa": "📄 Pour introduire ta demande de visa (Etape 5) :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a192d5d49583b99bea",
     "conseils": "🧠 Conseils pratiques & erreurs a eviter :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080a29936f876d9c9551b",
     "guide": "📘 Voici le guide complet de la procedure d'inscription :\nhttps://www.notion.so/Visa-Belgique-proc-dure-compl-te-22f0a740993080f0b036defbaa39057f"
 }
@@ -45,24 +44,27 @@ def normaliser(texte: str) -> str:
 
 # Commande /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Récupérer le message et s’assurer qu’il n’est pas None
+    # Récupérer le message et s'assurer qu'il n'est pas None
     message = update.message or update.effective_message
     if not message:
         return
     await message.reply_text(
-        "🎓 Bienvenue !\n\n"
-        "Ce bot est un guide spécialisé uniquement pour la procédure d’obtention du visa étudiant pour la Belgique, destiné principalement aux Camerounais.\n\n"
-        "📌 Il fonctionne par mot-clé. Voici les principaux mots-clés qu’il reconnaît :\n"
-        "conditions, equivalence, inscription, visa, documents, delais, frais, hebergement, contact\n\n"
-        "👉 Tu peux utiliser la commande /words à tout moment pour revoir cette liste.\n\n"
-        "💡 Chaque mot-clé te renvoie :\n\n"
-        "    un résumé clair,\n\n"
-        "    les liens officiels (sites du gouvernement belge, des Hautes Écoles, etc.),\n\n"
-        "    et parfois un PDF ou formulaire directement utile.\n\n"
-        "⚠️ Ce n’est pas une intelligence artificielle. Il ne peut pas répondre à des questions ouvertes ni t’expliquer les démarches.\n"
-        "Il est conçu pour te donner la bonne information depuis la bonne source, avec les liens pour vérifier toi-même ou aller plus loin.\n\n"
-        "✉️ Pour toute suggestion, remarque ou amélioration, utilise la commande /suggest.\n\n"
-        "Bonne chance dans tes démarches, et que la force soit avec toi �✨"
+        "🎓 Bienvenue sur le guide étudiant pour la Belgique !\n\n"
+        "Ce bot t'aide avec la procédure d'obtention du **visa étudiant belge**.\n\n"
+        "📌 Il fonctionne **par mot-clé** : tape un mot-clé pour obtenir un lien précis vers une étape ou une explication importante.\n"
+        "Chaque mot-clé renvoie vers une page Notion contenant **les infos, documents, liens officiels et instructions** utiles.\n\n"
+        "� Exemples de mots-clés reconnus :\n"
+        "- **equivalence** – obtenir l'équivalence du bac\n"
+        "- **inscription** – s'inscrire dans une école/université\n"
+        "- **prise en charge** – comprendre l'annexe 32 (garant)\n"
+        "- **campus belgique** – réussir l'entretien Campus Belgique\n"
+        "- **visa** – préparer la demande de visa\n"
+        "- **conseils** – astuces, erreurs à éviter\n"
+        "- **guide** – procédure complète, étape par étape\n\n"
+        "📖 Tape **/words** pour voir tous les mots-clés reconnus.\n\n"
+        "⚠️ Ce bot **n'est pas une intelligence artificielle**. Il ne peut pas t'expliquer, juste t'envoyer **la bonne source officielle** avec les bons documents.\n\n"
+        "✉️ Suggestions ? Utilise **/suggest**.\n\n"
+        "Bonne chance dans tes démarches. Que la force soit avec toi 💪✨"
     )
     logger.info("Utilisateur a appelé /start")
 
@@ -106,7 +108,7 @@ async def words_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Commande /suggest
 async def suggest_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Invite l’utilisateur à envoyer directement sa suggestion par Telegram"""
+    """Invite l'utilisateur à envoyer directement sa suggestion par Telegram"""
     message = update.message or update.effective_message
     if not message:
         return
@@ -117,7 +119,7 @@ async def suggest_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Gérer les messages
 async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # Récupérer le message et s’assurer qu’il n’est pas None
+    # Récupérer le message et s'assurer qu'il n'est pas None
     message = update.message or update.effective_message
     if not message or not message.text:
         return
@@ -130,10 +132,9 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await message.reply_text(reponses[cle])
                 return
     await message.reply_text(
-        "Désolé, je n’ai pas compris 😅\n"
+        "Désolé, je n'ai pas compris 😅\n"
         "Essaie de poser ta question autrement, en utilisant l'un des mots clés que je reconnais :\n"
-        "équivalence, admission, visa, prise en charge, campus belgique, conseils."
-        
+        "équivalence, inscription, visa, prise en charge, campus belgique, conseils."
     )
 
 #NE PAS OUBLIER DE REVOIR LE LANCEMENT 
